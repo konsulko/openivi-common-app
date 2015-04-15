@@ -68,8 +68,8 @@ html {
 
 body {
   font-family: SourceSansPro, sans-serif;
-  width: 1080px;
-  height: 1920px;
+  width: 1024px;
+  height: 600px;
   margin: 0;
   padding: 0;
   background-color: rgb(0,0,0);
@@ -165,7 +165,7 @@ li {
 
 /* Sectioning Content and Div *****************************/
 
-div, 
+div,
 nav,
 aside,
 article,
@@ -276,12 +276,12 @@ End pending */
 #top-bar ul {
   display: flex;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 #top-bar .grid-space {
   display: inline;
-  padding: 10px; 
+  padding: 10px;
   flex: 1;
   height: 100%;
   background-color: transparent;
@@ -437,25 +437,25 @@ input[type='button'] {
   border-color: #ffff00;
   box-shadow: inset 0 0 20px rgba(255, 255, 0, 0.9);
 }
-.clear-button::after { 
-  margin-left: -50px; 
+.clear-button::after {
+  margin-left: -50px;
   content: "\00d7";
   line-height: 100px;
   font-size: 5rem;
-  color: gray; 
+  color: gray;
 }
 
-/* Forms **************************************************/ 
+/* Forms **************************************************/
 
-/* 
-for consistent styling, apply .text-input class to elements: 
+/*
+for consistent styling, apply .text-input class to elements:
 - input type='text'
 - input type='password'
-- textarea 
-*/ 
+- textarea
+*/
 
 .text-input {
-  font-size: 3rem; 
+  font-size: 3rem;
   color: white;
   padding: 20px;
   margin: 10px;
@@ -480,7 +480,7 @@ textarea,
 }
 
 .input-yellow:focus {
-  box-shadow: 0 0 20px rgba(255, 255, 0, 0.9); 
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.9);
 }
 
 .input-blue {
@@ -504,18 +504,18 @@ textarea,
 /* .input-group
    A wrapper for grouping input fields, labels and other
    form content. Best used on block elements (eg. div)
-*/ 
+*/
 
 .input-group {
   display: flex;
   justify-content: space-between;
 }
 
-.input-group label { 
+.input-group label {
   flex: 1;
-} 
+}
 
-.input-group .text-input { 
+.input-group .text-input {
   flex: 2;
 }
 
@@ -530,7 +530,7 @@ textarea,
 .switch-large {
   width: 450px;
   height: 150px;
-} 
+}
 
 .switch-small {
   width: 225px;
@@ -561,7 +561,7 @@ textarea,
   background-size: 100% 100%;
   background-image: url(../images/switchcontrol.svg);
   -webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.35));
-} 
+}
 
 /* On/Off Styles for Background Plate */
 
@@ -672,7 +672,7 @@ textarea,
   background-color: transparent;
   box-shadow: inset 0 0 0 .125em rgba(126,126,126,.25),
               inset 0 0 .5em .125em rgba(0,0,0,.5);
-              
+
 }
 
 .vertical-slider,
@@ -739,7 +739,7 @@ textarea,
   font-size: 1em;
 }
 
-/* Modifiers **********************************************/ 
+/* Modifiers **********************************************/
 /* Modifiers should stay at the bottom of the CSS document */
 
 .hidden,
@@ -822,21 +822,21 @@ textarea {
   touch-action: none;
 }
 
-/* Allows vertical and horizontal scrolling where specified 
+/* Allows vertical and horizontal scrolling where specified
    for lists */
 ul, ol {
   touch-action: pan-x pan-y;
 }
 
-/* 
+/*
   Apply to elements where a scrollbar is desired.
   Shows a standard scrollbar as needed.
-*/ 
+*/
 
-.scrollbar-x { 
+.scrollbar-x {
   overflow-x: auto;
   touch-action: pan-x;
-} 
+}
 
 .scrollbar-y {
   overflow-y: auto;
@@ -853,8 +853,8 @@ ul, ol {
   a scrollbar is desired.
 */
 
-.scrollable-x { 
-  overflow-x: auto; 
+.scrollable-x {
+  overflow-x: auto;
   touch-action: pan-x;
 }
 
@@ -874,48 +874,48 @@ ul, ol {
   display: none;
 }
   ::-webkit-scrollbar {
-  width: 11px;  
-  margin-top: 20px; 
-} 
-::-webkit-scrollbar-track { 
-  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));  
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8)); 
-  border-left: 1px solid #202020; 
-  border-right: 1px solid #606060;  
-  border-top: none; 
-  border-bottom: none;  
-  margin-bottom: -1px;  
-} 
-::-webkit-scrollbar-thumb {   
-  background:linear-gradient(to right, rgba(112,112,112, .8), rgba(72,72,72, .8));  
-  border-radius:5px;  
-  border: 1px solid #202020;  
-}   
- ::-webkit-scrollbar-button { 
-  height:11px;  
-  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));  
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8)); 
-  border-left: 1px solid #202020; 
-  border-right: 1px solid #606060;  
-  border-top: none; 
-  border-bottom: none;  
-}   
-::-webkit-scrollbar-corner {  
-  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));  
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8)); 
-  border-left: 1px solid #202020; 
-  border-right: 1px solid #606060;  
-  border-top: none; 
-  border-bottom: none;  
-  width: 8px; 
-  height: 8px;  
-} 
+  width: 11px;
+  margin-top: 20px;
+}
+::-webkit-scrollbar-track {
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  border-left: 1px solid #202020;
+  border-right: 1px solid #606060;
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: -1px;
+}
+::-webkit-scrollbar-thumb {
+  background:linear-gradient(to right, rgba(112,112,112, .8), rgba(72,72,72, .8));
+  border-radius:5px;
+  border: 1px solid #202020;
+}
+ ::-webkit-scrollbar-button {
+  height:11px;
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  border-left: 1px solid #202020;
+  border-right: 1px solid #606060;
+  border-top: none;
+  border-bottom: none;
+}
+::-webkit-scrollbar-corner {
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(72, 72, 72, .8));
+  border-left: 1px solid #202020;
+  border-right: 1px solid #606060;
+  border-top: none;
+  border-bottom: none;
+  width: 8px;
+  height: 8px;
+}
 
-/*orange scrollbar*/  
-/*::-webkit-scrollbar-thumb {   
-  background-color:#fe9c00; 
-  border-radius:5px;  
-} */  
+/*orange scrollbar*/
+/*::-webkit-scrollbar-thumb {
+  background-color:#fe9c00;
+  border-radius:5px;
+} */
 
 
 /**********************************************************/
@@ -1282,4 +1282,3 @@ ul, ol {
   background-color: rgb(138, 255, 0);
   background-color: rgba(138, 255, 0, 0.54);
 }
-

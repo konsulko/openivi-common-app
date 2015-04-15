@@ -32,13 +32,13 @@
 	background-size: 90%;
 	-webkit-transition-timing-function: linear;
 	-webkit-transition: all 1s,background-image 0s;
-	
+
 	-moz-transition-timing-function: linear;
 	-moz-transition: all 1s,background-image 0s;
-	
+
 	-ms-transition-timing-function: linear;
 	-ms-transition:all 1s,background-image 0s;
-	
+
 	-o-transition-timing-function: linear;
 	-o-transition:all 1s,background-image 0s;
 }
@@ -121,17 +121,17 @@
 }
 /* move to components/tabs.css, delete once image path is changed */
 	/* .tabs{
-		width:1080px !important;
-		height:1920px;
+		width:1024px !important;
+		height:600px;
 	}
 	.tabsTabs{
-		width:1080px !important;
+		width:1024px !important;
 	}
 	.tabsTabClear{
 		width:870px !important;
 	}
 	.tabsTopPanel{
-		background-size:1080px 110px;
+		background-size:1024px 110px;
 	}
 	.exitButton, .tabsCloseButton{
 		position:absolute;
@@ -145,14 +145,14 @@
 		height:42px !important;
 		background-image: url('../../../DNA_common/images/bt_close.png') !important;
 	}
-/* end of styles moved to components/tabs.css */	
+/* end of styles moved to components/tabs.css */
 .exitButton {
 	position:absolute;
 	top:0px;
 	right:0px;
-} 
-	
-.shadowStd{	
+}
+
+.shadowStd{
 	border: 1px solid white;
 	background: rgba(0, 0, 0, 0.8);
    -webkit-box-shadow: inset 0 0 43px rgb(179, 227, 255);
@@ -168,7 +168,7 @@
 		z-index:5;
 		font-size:20px;
 		background-color:rgba(0,0,0,1);
-		-webkit-mask: -webkit-gradient(linear, 0 1920, 0 1200,  from(rgba(0,0,0,0.5)), to(rgba(0,0,0,1)));
+		-webkit-mask: -webkit-gradient(linear, 0 600, 0 400,  from(rgba(0,0,0,0.5)), to(rgba(0,0,0,1)));
 		overflow-x:hidden;
 		overflow-y:scroll;
 	}
@@ -199,16 +199,16 @@
 	.hexrow {
 		white-space: nowrap;
 		/*right/left margin set at (( width of child div x sin(30) ) / 2) makes a fairly tight fit; a 3px bottom seems to match*/
-		margin: 0 25px 3px; 
+		margin: 0 25px 3px;
 	}
 	.hexrow > div {
 		width: 99px;
 		height: 173.2px; /* ( width x cos(30) ) x 2 */
 		/* For margin:
-		right/left = ( width x sin(30) ) makes no overlap 
+		right/left = ( width x sin(30) ) makes no overlap
 		right/left = (( width x sin(30) ) / 2) leaves a narrow separation
 		*/
-		margin: 30px 43px; 
+		margin: 30px 43px;
 		position: relative;
 		background-image: url('../../../DNA_common/images/AppHex.png');
 		background-position: -50px 0px; /* -left position -1 x width x sin(30) */
@@ -221,7 +221,7 @@
 		vertical-align:middle;
 	}
 	.hexrow > div:nth-child(odd) {
-		top: -44.8px; /* -1 x( ( width x cos(30) / 2) + (hexrow bottom margin / 2)) */ 
+		top: -44.8px; /* -1 x( ( width x cos(30) / 2) + (hexrow bottom margin / 2)) */
 	}
 	.hexrow > div:nth-child(even) {
 		top: 73.3px; /* ( width x cos(30) / 2 ) */
@@ -229,13 +229,13 @@
 	.hexrow > div > div:first-of-type {
 		position: absolute;
 		width: 100%;
-		height: 100%; 
+		height: 100%;
 		top: 0;
 		left: 0;
 		z-index: -1;
 		overflow: hidden;
 		background-image: inherit;
-		
+
 		-ms-transform:rotate(60deg); /* IE 9 */
 		-moz-transform:rotate(60deg); /* Firefox */
 		-webkit-transform:rotate(60deg); /* Safari and Chrome */
@@ -254,13 +254,13 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-		
+
 		-ms-transform:rotate(-60deg) translate(-150px, 0); /* IE 9 */
 		-moz-transform:rotate(-60deg) translate(-150px, 0); /* Firefox */
 		-webkit-transform:rotate(-60deg) translate(-150px, 0); /* Safari and Chrome */
 		-o-transform:rotate(-60deg) translate(-150px, 0); /* Opera */
 		transform:rotate(-60deg) translate(-150px, 0);
-		
+
 		-ms-transform-origin: 0 0; /* IE 9 */
 		-webkit-transform-origin: 0 0; /* Safari and Chrome */
 		-moz-transform-origin: 0 0; /* Firefox */
@@ -277,7 +277,7 @@
 		z-index: -2;
 		overflow: hidden;
 		background-image: inherit;
-		
+
 		-ms-transform:rotate(-60deg); /* IE 9 */
 		-moz-transform:rotate(-60deg); /* Firefox */
 		-webkit-transform:rotate(-60deg); /* Safari and Chrome */
@@ -296,14 +296,14 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-		
+
 		/*translate properties are initial width (100px) and half height (173.2 / 2 = 86.6) */
 		-ms-transform:rotate(60deg) translate(100px, 86.6px); /* IE 9 */
 		-moz-transform:rotate(60deg) translate(100px, 86.6px); /* Firefox */
 		-webkit-transform:rotate(60deg) translate(100px, 86.6px); /* Safari and Chrome */
 		-o-transform:rotate(60deg) translate(100px, 86.6px); /* Opera */
 		transform:rotate(60deg) translate(100px, 86.6px);
-		
+
 		-ms-transform-origin: 100% 0; /* IE 9 */
 		-webkit-transform-origin: 100% 0; /* Safari and Chrome */
 		-moz-transform-origin: 100% 0; /* Firefox */
@@ -312,5 +312,5 @@
 	}
 	.hexrow > div > span {
 		vertical-align: middle;
-		white-space: normal; 
+		white-space: normal;
 	}

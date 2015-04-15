@@ -5,15 +5,15 @@
 }
 
  .tabsTopPanel {
-	 background-image: url('bg_top_navi_blue.png'); 
+	 background-image: url('bg_top_navi_blue.png');
 }
 
 .tabsTab, .tabsTabClear {
-	 background-image: url('bg_top_navi_unselect1px_blue.png'); 
+	 background-image: url('bg_top_navi_unselect1px_blue.png');
 }
 
 .tabsTabSelected {
-	 background-image: url('bg_top_navi_select_blue.png'); 
+	 background-image: url('bg_top_navi_select_blue.png');
 }
 
 .tabsCloseSubPanelButton {
@@ -22,10 +22,10 @@
 /* end of styles copied from tabs.css in DNA_common/css */
 
 
-/* redundant with flex box 
+/* redundant with flex box
 .tabs{
-	width:1080px !important;
-	height:1920px;
+	width:1024px !important;
+	height:600px;
 }*/
 .tabs {
 	/*width: 100%;*/
@@ -44,7 +44,7 @@
 
 /* style copied from components/topBar/topBar.css */
 .tabsTopPanel{
-	background-size:1080px 110px;
+	background-size:1024px 110px;
 }
 .tabsTopPanel {
 	margin: 0 0 40px 0;
@@ -84,7 +84,7 @@
 	top: 1px;
 }
 */
-/* styles copied from components/topBar/topBar.css; is over-ridden 
+/* styles copied from components/topBar/topBar.css; is over-ridden
 .tabsTabs{
 	width:1080px !important; */
 
@@ -143,8 +143,8 @@
 }
 
 .tabsTopSubPanel {
-	z-index: 0;	
-	background-color: #222; 
+	z-index: 0;
+	background-color: #222;
 	margin: 0 40px;
 }
 

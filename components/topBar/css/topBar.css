@@ -4,7 +4,7 @@
 	background-color: rgb(0,0,0);
 }*/
 html {
-overflow: hidden;       
+overflow: hidden;
 }
 .clearBoth {
 	clear:both;
@@ -37,12 +37,12 @@ overflow: hidden;
 	border-left:1px solid gray;
 }
 #homeScreenIcon {
-	width:89px; 
+	width:89px;
 	height:89px;
 	position: absolute;
 	left:0;
 	top: 0;
-	margin: 10px 0 0 20px;	
+	margin: 10px 0 0 20px;
 
 }
 .hexGridHeading{
@@ -65,7 +65,7 @@ overflow: hidden;
 	float:right;
 }
 #appGridIcon {
-	width:89px; 
+	width:89px;
 	height:89px;
 	position: absolute;
 	right:0;
@@ -83,7 +83,7 @@ overflow: hidden;
 	z-index:5;
 	font-size:20px;
 	background-color:rgba(0,0,0,1);
-	-webkit-mask: -webkit-gradient(linear, 0 1920, 0 1200,  from(rgba(0,0,0,0.5)), to(rgba(0,0,0,1)));
+	-webkit-mask: -webkit-gradient(linear, 0 600, 0 400,  from(rgba(0,0,0,0.5)), to(rgba(0,0,0,1)));
 	overflow-x:hidden;
 	overflow-y:scroll;
 	touch-action: pan-y;
@@ -116,16 +116,16 @@ overflow: hidden;
 	.hexrow {
 		white-space: nowrap;
 		/*right/left margin set at (( width of child div x sin(30) ) / 2) makes a fairly tight fit; a 3px bottom seems to match*/
-		margin: 0 25px 3px; 
+		margin: 0 25px 3px;
 	}
 	.hexrow > div {
 		/*width: 99px;
 		height: 173.2px; /* ( width x cos(30) ) x 2 */
 		/* For margin:
-		right/left = ( width x sin(30) ) makes no overlap 
+		right/left = ( width x sin(30) ) makes no overlap
 		right/left = (( width x sin(30) ) / 2) leaves a narrow separation
 		*/
-		margin: 20px -4px; 
+		margin: 20px -4px;
 		position: relative;
 		background-image: url('../images/AppHex.png');
 		/*background-position: -50px 0px; /* -left position -1 x width x sin(30) */
@@ -138,7 +138,7 @@ overflow: hidden;
 		line-height: 12px; /*equals height*/
 	}
 	.hexrow > div:nth-child(odd) {
-		top: -44.8px; /* -1 x( ( width x cos(30) / 2) + (hexrow bottom margin / 2)) */ 
+		top: -44.8px; /* -1 x( ( width x cos(30) / 2) + (hexrow bottom margin / 2)) */
 	}
 	.hexrow > div:nth-child(even) {
 		top: 73.3px; /* ( width x cos(30) / 2 ) */
@@ -146,13 +146,13 @@ overflow: hidden;
 	.hexrow > div > div:first-of-type {
 		position: absolute;
 		width: 100%;
-		height: 100%; 
+		height: 100%;
 		top: 0;
 		left: 0;
 		z-index: -1;
 		overflow: hidden;
 		background-image: inherit;
-		
+
 		-ms-transform:rotate(60deg); /* IE 9 */
 		-moz-transform:rotate(60deg); /* Firefox */
 		-webkit-transform:rotate(60deg); /* Safari and Chrome */
@@ -171,13 +171,13 @@ overflow: hidden;
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-		
+
 		-ms-transform:rotate(-60deg) translate(-150px, 0); /* IE 9 */
 		-moz-transform:rotate(-60deg) translate(-150px, 0); /* Firefox */
 		-webkit-transform:rotate(-60deg) translate(-150px, 0); /* Safari and Chrome */
 		-o-transform:rotate(-60deg) translate(-150px, 0); /* Opera */
 		transform:rotate(-60deg) translate(-150px, 0);
-		
+
 		-ms-transform-origin: 0 0; /* IE 9 */
 		-webkit-transform-origin: 0 0; /* Safari and Chrome */
 		-moz-transform-origin: 0 0; /* Firefox */
@@ -194,7 +194,7 @@ overflow: hidden;
 		z-index: -2;
 		overflow: hidden;
 		background-image: inherit;
-		
+
 		-ms-transform:rotate(-60deg); /* IE 9 */
 		-moz-transform:rotate(-60deg); /* Firefox */
 		-webkit-transform:rotate(-60deg); /* Safari and Chrome */
@@ -213,14 +213,14 @@ overflow: hidden;
 		bottom: 0;
 		left: 0;
 		z-index: 1;
-		
+
 		/*translate properties are initial width (100px) and half height (173.2 / 2 = 86.6) */
 		-ms-transform:rotate(60deg) translate(100px, 86.6px); /* IE 9 */
 		-moz-transform:rotate(60deg) translate(100px, 86.6px); /* Firefox */
 		-webkit-transform:rotate(60deg) translate(100px, 86.6px); /* Safari and Chrome */
 		-o-transform:rotate(60deg) translate(100px, 86.6px); /* Opera */
 		transform:rotate(60deg) translate(100px, 86.6px);
-		
+
 		-ms-transform-origin: 100% 0; /* IE 9 */
 		-webkit-transform-origin: 100% 0; /* Safari and Chrome */
 		-moz-transform-origin: 100% 0; /* Firefox */

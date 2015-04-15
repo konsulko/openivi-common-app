@@ -3,7 +3,7 @@ body {
 	font-family: "Droid Sans", sans-serif;  *******this style in common.css******
 }*/
 html {
-overflow: hidden; 
+overflow: hidden;
 }
 .clearBoth {
 	clear:both;
@@ -44,7 +44,7 @@ overflow: hidden;
 #closeApp{
 	display:none;
 }
-/*drop in any logo of any size loading the image content to style.css in app; 
+/*drop in any logo of any size loading the image content to style.css in app;
 the following style will center the image but not size or stretch it*/
 #bottomBarLogoImg{
 /*	width:400px;  this size stretches the logos out of proportion, doesn't work for all
@@ -58,7 +58,7 @@ the following style will center the image but not size or stretch it*/
 }
 
 .bottomBarLogo {
-	content:url('/DNA_common/components/bottomBar/images/JLR-Logo.png');
+	content:url('/DNA_common/components/bottomBar/images/logo.png');
 }
 
 #volumeIndicator{
@@ -117,10 +117,10 @@ the following style will center the image but not size or stretch it*/
 	overflow:hidden;
 }
 .shadowSmall
-{	
+{
 	border: 1px solid white;
 	background: rgba(0, 0, 0, 0.9);
    -webkit-box-shadow: inset 0 0 20px rgb(179, 227, 255);
    box-shadow:         inset 0 0 20px rgb(179, 227, 255);
-	
+
 }

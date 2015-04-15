@@ -1,7 +1,7 @@
 /**
  * @module CarTheme
  **/
- 
+
 $("#bottomBar").remove();
 $("body").append('<div id="bottomBar" class="shadowSmall"></div>');
 
@@ -20,7 +20,7 @@ function loadSettings(){
     "use strict";
     /**
      * Class which provides methods to fill content of bottom bar for JQuery plugin. Use following snippet to include component in your `index.html` file:
-     * 
+     *
      *     <script type="text/javascript" src="./common/components/bottomBar/bottomBar.js"></script>
      *
      * and following code to initialize:
@@ -38,16 +38,16 @@ function loadSettings(){
              * @property thisObj {Object}
              */
             thisObj: null,
-            /** 
+            /**
              * Initializes bottom bar.
              * @method init
              * @param backButtonDisabled {Bool} Indicates if bottom bar should contain back button.
              * @parama volumeSliderDisabled
              */
             init: function (backButtonDisabled,volumeSliderDisabled) {
-            	
+
             	volumeSliderDisabled = (volumeSliderDisabled == undefined)? false:true;
-            	
+
 				//$("#settingsMenu").remove();
 				//$("#settingsicon").remove();
 				$("#bottomBarLogoImg").remove();
@@ -61,8 +61,8 @@ function loadSettings(){
                	this.append('<div id="settingsMenu"></div>');
 						this.append('<img id="settingsIcon">');
 						Settings.pageUpdate();
-						this.append('<img id="bottomBarLogoImg" src="./DNA_common/images/JLR-Logo.png" onclick="launchApplication(\'intelPoc10.HomeScreen\')">');
-                
+						this.append('<img id="bottomBarLogoImg" src="./DNA_common/images/logo.png" onclick="launchApplication(\'intelPoc10.HomeScreen\')">');
+
                 if($('#volumeControl').length == 0){
 	                if(!volumeSliderDisabled){
 						$("#volumeSlider").remove();
@@ -83,13 +83,13 @@ function loadSettings(){
 								'<img id="volumeIndicator" src="./DNA_common/images/VolFull.png">' +
 							'</div>' +
 						'</div>');
-	                	
+
 	                }
                 }
-                
+
                 BottomBar.thisObj = this;
             },
-            /** 
+            /**
              * Method is invoked after click on back button, fires clickOnBackButton event and causes application exit.
              * @method onBackButtonClick
              */
@@ -101,7 +101,7 @@ function loadSettings(){
             }
         };
 
-    /** 
+    /**
      * jQuery constructor for {{#crossLink "BottomBar"}}{{/crossLink}} plugin.
      * @param method {Object|jQuery selector} Identificator (name) of method or jQuery selector.
      * @for jQuery
@@ -142,18 +142,18 @@ function loadSettings(){
 			//pull some coordinates and percentages
 			var parentOffset = e.target.offsetHeight-120; //seems to be offset by topbar height
 			var relY = Math.floor((e.pageY - parentOffset)/8.96);
-			
+
 			//quick and dirty math
 			if(relY<1) relY=1;
 			if(relY>100) relY=100;
 			var invY = 100-relY;
 			jqY = Math.floor((invY+1)*0.92+163); //From 163 to 255 = 92 different discreet volume settings
-			
+
 			//update appropriate onscreen widgets
 			$("#volumeCrop").width(invY+'%');
 			$("#volumeSlideCrop").height(invY+'%');
 			$("#volumeKnob").css('top',(relY*8.80-70)+'px');
-			
+
 			//encode some stringified json (jqY = level 163 to 255) and send to most
 			var jsonenc = {"api":"setTone","dest":"volume","level":jqY,"incr":0};
 			most.mostAsync(JSON.stringify(jsonenc), volumeQueryCB);
@@ -172,11 +172,11 @@ var previousVolume = -1, curVolume=0;
 // current MOST volume setting.
 //
 function refreshVolume() {
-								
+
 	var jsonenc = {api:"setTone", dest:"volumeQuery", level:0, incr:0};
 	//console.log("JE: refreshVolume query");
 	//most.mostAsync(JSON.stringify(jsonenc), volumeQueryCB);
-	
+
 }
 // One or both of these will need to set the variable which holds the latest updated volume
 // received from the MOST.
@@ -184,10 +184,10 @@ var volumeQueryCB = function(response) {
 	 console.log("JE js: volumeQueryCB " + response);
 	 curVolume = response;
 	var sl = (curVolume - 159)/4;
-		
+
 	$(".noVolumeSlider").val(sl);
 };
-	
+
 var volumeSetCB = function(response) {
 	  console.log("JE js: volumeSetCB " + response);
-};	
+};
