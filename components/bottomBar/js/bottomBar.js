@@ -11,7 +11,7 @@ BottomBar.LogoTimeoutMouseDown = function(e) {
   // console.log("BottomBar.LogoTimeoutMouseDown()");
   homescreenTimeout = setTimeout(function() {
     clearTimeout(homescreenTimeout);
-    if (tizen.application.getCurrentApplication().appInfo.packageId != "JLRPOCX001") {
+    if (tizen.application.getCurrentApplication().appInfo.packageId != "OPENIVI001") {
       tizen.application.getCurrentApplication().exit();
     }
   }, 2500);

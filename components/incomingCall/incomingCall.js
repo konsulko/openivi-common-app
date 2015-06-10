@@ -88,7 +88,7 @@ var IncomingCall = function() {
 IncomingCall.prototype.onCallChange = function(result) {
 	console.log("tizen.phone.addCallChangedListener callback");
 	/* global getAppByID */
-	var appId = getAppByID('JLRPOCX031.Phone');
+	var appId = getAppByID('OPENIVI031.Phone');
 
 	var contact;
 	if (!!result.contact.name) {
@@ -180,14 +180,14 @@ IncomingCall.prototype.acceptIncommingCall = function() {
 	"use strict";
 	/* todo add call to phone application */
 	this.hide();
-	var appId = getAppByID('JLRPOCX031.Phone');
+	var appId = getAppByID('OPENIVI031.Phone');
 	/* if app isn't phone */
 	if (typeof(Phone)==="undefined") {
 		console.log("acceptIncommingcall Launch Phone");
 		tizen.phone.answerCall(function(result) {
                     console.log(result.message);
                 });
-		launchApplication('JLRPOCX031.Phone');
+		launchApplication('OPENIVI031.Phone');
 		/* if app is phone */
 	} else {
 		if (typeof(tizen) !== 'undefined' && tizen.phone) {

@@ -86,7 +86,7 @@ function connectToSotaSocket(){
   conn.onopen = function(){
     console.log("Successfully connected to SOTA Web Socket");
 
-    if(currentApp.appInfo.id == "JLRPOCX001.HomeScreen"){
+    if(currentApp.appInfo.id == "OPENIVI001.HomeScreen"){
       sota = new sotaUpdater(conn);
       sota.startCheckUpdates();  
     }
@@ -129,7 +129,7 @@ function connectToSotaSocket(){
 
 $(document).ready(function() {
   connectRetries = -1; // -1 == infinitely retry.
-  if(currentApp.appInfo.id == "JLRPOCX001.HomeScreen"){
+  if(currentApp.appInfo.id == "OPENIVI001.HomeScreen"){
     includeHTML("DNA_common/components/sota/sota.html",sotaUpdateElements.importSuccess,sotaUpdateElements.importFail);
   }
 

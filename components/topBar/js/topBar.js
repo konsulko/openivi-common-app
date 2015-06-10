@@ -25,8 +25,8 @@ function reqListener(e){
 TopBar.TemplateHTML = "DNA_common/components/topBar/topBar.html";
 
 TopBar.topbarBack = function() {
-	if(tizen.application.getCurrentApplication().appInfo.packageId != "JLRPOCX001"){
-		callApp('JLRPOCX001.HomeScreen');
+	if(tizen.application.getCurrentApplication().appInfo.packageId != "OPENIVI001"){
+		callApp('OPENIVI001.HomeScreen');
 	}
 }
 
@@ -424,7 +424,7 @@ function initTaskLauncher(){
 	if (typeof tizen !== 'undefined') {
 		try {
 			//Update the topbar icon
-			if(tizen.application.getCurrentApplication().appInfo.packageId == "JLRPOCX001")
+			if(tizen.application.getCurrentApplication().appInfo.packageId == "OPENIVI001")
 				$("#homeScreenIcon").attr('src', '/DNA_common/images/tizen.png');
 			else
 				$("#homeScreenIcon").attr('src', '/DNA_common/images/homescreen_icon.png');
@@ -505,13 +505,13 @@ function initIcon(){
 				taskList[tasks]=getIcons(tasks);
 		}
 	}else{
-		taskList=[{source:"/DNA_common/images/application_icons/googlemaps_app_icon.png",	cb:"JLRPOCX015.GoogleMaps"},
-				  {source:"/DNA_common/images/application_icons/browser_app_icon.png",	cb:"JLRPOCX030.Browser"},
-				  {source:"/DNA_common/images/application_icons/dashboard_app_icon.png",	cb:"JLRPOCX033.Dashboard"},
-				  {source:"/DNA_common/images/application_icons/hvac_app_icon.png",		cb:"JLRPOCX008.HVAC"},
-				  {source:"/DNA_common/images/application_icons/weather_app_icon.png",	cb:"JLRPOCX035.Weather"},
-				  {source:"/DNA_common/images/application_icons/fmradio_app_icon.png", 		cb:"JLRPOCX004.FMRadio"},
-				  {source:"/DNA_common/images/application_icons/nfc_app_icon.png", 		cb:"JLRPOCX034.NFC"}];
+		taskList=[{source:"/DNA_common/images/application_icons/googlemaps_app_icon.png",	cb:"OPENIVI015.GoogleMaps"},
+				  {source:"/DNA_common/images/application_icons/browser_app_icon.png",	cb:"OPENIVI030.Browser"},
+				  {source:"/DNA_common/images/application_icons/dashboard_app_icon.png",	cb:"OPENIVI033.Dashboard"},
+				  {source:"/DNA_common/images/application_icons/hvac_app_icon.png",		cb:"OPENIVI008.HVAC"},
+				  {source:"/DNA_common/images/application_icons/weather_app_icon.png",	cb:"OPENIVI035.Weather"},
+				  {source:"/DNA_common/images/application_icons/fmradio_app_icon.png", 		cb:"OPENIVI004.FMRadio"},
+				  {source:"/DNA_common/images/application_icons/nfc_app_icon.png", 		cb:"OPENIVI034.NFC"}];
 	}
 	displayTasks();
 	initAppGrid();
