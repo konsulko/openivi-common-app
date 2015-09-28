@@ -133,7 +133,8 @@ $(document).ready(function() {
     includeHTML("DNA_common/components/sota/sota.html",sotaUpdateElements.importSuccess,sotaUpdateElements.importFail);
   }
 
-  sota = connectToSotaSocket();
+  //Do not connect to SOTA web socket
+  sota = null;
 
 });
 
