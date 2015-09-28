@@ -1684,7 +1684,7 @@ uiUpdateFunc = function() {
 	if(logit) {console.info("AMB: uiUpdateFunc 11 called.");}
 
 	// If Speed and TyrePressure AMB get calls are failing, try N times then stop filling up the log with error messages.
-	if (ambFailCnt > 0) {
+	if ( (ambFailCnt > 0) && (undefined !== GlobalSelf._mappingTable) ) {
 		GlobalSelf._mappingTable["VehicleSpeed"].getFunction();
 		if(logit) { console.log("AMB: testFunc VehicleSpeed, get rets: " + GlobalSelf._mappingTable["VehicleSpeed"].curValue); }
 		o = {zone: '000000', signalAndValue: { signalName: "VehicleSpeed", signalVal: GlobalSelf._mappingTable["VehicleSpeed"].curValue }  };
