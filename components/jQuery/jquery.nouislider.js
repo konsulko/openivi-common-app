@@ -4,7 +4,13 @@
 	$.fn.noUiSlider = function (options, flag) {
 
 		// test for mouse, pointer or touch
-		var EVENT = window.navigator.msPointerEnabled ? 2 : 'ontouchend' in document ? 3 : 1;
+		//var EVENT = window.navigator.msPointerEnabled ? 2 : 'ontouchend' in document ? 3 : 1;
+
+		//Ensure that the sliders will be working as expected on the targetted devices
+		//Please note you may need to change this value if you are running the application
+		//in another envieronment
+		var EVENT = 1;
+
 		if (window.debug && console) {
 			console.log(EVENT);
 		}
