@@ -509,7 +509,7 @@ function initIcon(){
 				  {source:"/DNA_common/images/application_icons/browser_app_icon.png",	cb:"OPENIVI030.Browser"},
 				  {source:"/DNA_common/images/application_icons/dashboard_app_icon.png",	cb:"OPENIVI033.Dashboard"},
 				  {source:"/DNA_common/images/application_icons/hvac_app_icon.png",		cb:"OPENIVI008.HVAC"},
-				  {source:"/DNA_common/images/application_icons/weather_app_icon.png",	cb:"OPENIVI035.Weather"},
+				  {source:"/DNA_common/images/application_icons/media_player_app_icon.png",	cb:"OPENIVI003.MediaManager"},
 				  {source:"/DNA_common/images/application_icons/fmradio_app_icon.png", 		cb:"OPENIVI004.FMRadio"},
 				  {source:"/DNA_common/images/application_icons/nfc_app_icon.png", 		cb:"OPENIVI034.NFC"}];
 	}
