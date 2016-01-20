@@ -218,7 +218,9 @@ function insertAppFrame(appFrame) {
 	$("<span />").addClass("homeScrAppGridTitle").text(appFrame.appName.substring(0,11).replace("-","")).appendTo(textDiv);
 
 	$('.hexrow').last().append(rootDiv);
-
+	// Disable image generation as it consumes too much resources
+	// and leads to systemd-journald corruption at HVAC launch
+	/*
 	var img = new Image();
 	var ctx = document.createElement('canvas').getContext('2d');
 
@@ -245,6 +247,7 @@ function insertAppFrame(appFrame) {
 	};
 
 	img.src = appFrame.iconPath;
+	*/
 	//console.log("img "+img.src+" app "+appFrame.appName);
 
 	index++;
